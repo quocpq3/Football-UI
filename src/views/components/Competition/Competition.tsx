@@ -1,6 +1,10 @@
+
 const Competition = function () {
     return ( 
-        <h1>Competition</h1>
+        <div className="flex">
+            <div>
+                </div>
+        </div>
      );
 }
 

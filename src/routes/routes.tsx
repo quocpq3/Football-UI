@@ -1,41 +1,62 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Sport from '../views/Sport/Sport';
+// import Sport from '../views/components/Sport/Sport';
 import DefaultLayoutDashBoard from '../layouts/components/Default.layout';
-import LivePlay from '../views/Live Play/LivePlay';
-import News from '../views/News/News';
-import Statistics from '../views/Statistics/Statistics';
-import Transfer from '../views/Transfer/Transfer';
-import Competition from '../views/Competition/Competition';
+// import LivePlay from '../views/components/Live Play/LivePlay';
+// import News from '../views/components/News/News';
+// import Statistics from '../views/components/Statistics/Statistics';
+// import Transfer from '../views/components/Transfer/Transfer';
+// import Competition from '../views/components/Competition/Competition';
+import Laliga from '../views/Laliga/Laliga';
+import BundesLiga from './../views/Bundesliga/Bundesliga';
+import ChampionsLeague from '../views/ChampionsLeague/ChampionsLeague';
+import LigueOne from '../views/Ligue1/LigueOne';
+import PremierLeague from '../views/PremierLeague/PremierLeague';
+import Seria from '../views/Seria/Seria';
+import Mls from '../views/MLS/Mls';
+import LigaMX from '../views/LigaMX/LigaMX';
 
+// const routesChildren = [
+//     {
 
+//     }
+// ]
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <DefaultLayoutDashBoard/>,
         children :[
         {
-            index: true, 
-            element: <Sport/>
+            index: true,        
+            element: <Laliga/>,
         },
         {
-            path: 'liveplay',
-            element: <LivePlay/>,
+            path: 'bundesliga',
+            element: <BundesLiga/>,
         },
         {
-            path: 'news',
-            element:<News/>,
+            path: 'championsleague',
+            element: <ChampionsLeague/> 
         },
         {
-            path: 'statistics',
-         element:   <Statistics/>,
+            path: 'ligueone',
+         element:   <LigueOne/> 
         },
         {
-            path: 'transfer',
-         element:   <Transfer/>,
+            path: 'premierleague',
+         element: <PremierLeague/>
+        },
+        
+        {
+            path: 'seria',
+         element: <Seria/>
         },
         {
-            path: 'competition',
-         element:   <Competition/>,
+            path: 'mls',
+         element: <Mls/>
+        },
+        {
+            path: 'ligamx',
+         element: <LigaMX/>
         },
     ]
     },    
