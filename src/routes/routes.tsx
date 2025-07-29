@@ -1,23 +1,37 @@
 import { createBrowserRouter } from 'react-router-dom'
-// import Sport from '../views/components/Sport/Sport';
 import DefaultLayoutDashBoard from '../layouts/components/Default.layout';
-// import LivePlay from '../views/components/Live Play/LivePlay';
-// import News from '../views/components/News/News';
-// import Statistics from '../views/components/Statistics/Statistics';
-// import Transfer from '../views/components/Transfer/Transfer';
-// import Competition from '../views/components/Competition/Competition';
-import Laliga from '../views/Laliga/Laliga';
-import BundesLiga from './../views/Bundesliga/Bundesliga';
-import ChampionsLeague from '../views/ChampionsLeague/ChampionsLeague';
-import LigueOne from '../views/Ligue1/LigueOne';
-import PremierLeague from '../views/PremierLeague/PremierLeague';
-import Seria from '../views/Seria/Seria';
-import Mls from '../views/MLS/Mls';
-import LigaMX from '../views/LigaMX/LigaMX';
+import DashBoard from '../views/Dashboard/Dashboard';
+import Squad from '../views/Squad/Squad';
+import Message from './../views/Message/Message';
+import Calendar  from './../views/Calendar/Calendar';
+import Settings from '../views/Settings/Settings';
+import Transfer from '../views/Transfer/Transfer';
+import YouthAcademy from '../views/YouthAcademy/YouthAcademy';
 
 // const routesChildren = [
-//     {
-
+//     { 
+//         path: 'sport',
+//         element:<Sport/>
+//     },            
+//     {   
+//         path: 'liveplay', 
+//         element:<LivePlay/>  
+//     },
+//     {   
+//         path: 'news', 
+//         element:<News/>
+//     },
+//     { 
+//         path: 'statistics', 
+//         element:<Statistics/> 
+//     },
+//     { 
+//         path: 'transfer', 
+//         element: <Transfer/>
+//     },
+//     { 
+//         path: 'competition', 
+//         element: <Competition/>
 //     }
 // ]
 const routes = createBrowserRouter([
@@ -25,38 +39,42 @@ const routes = createBrowserRouter([
         path: '/',
         element: <DefaultLayoutDashBoard/>,
         children :[
-        {
-            index: true,        
-            element: <Laliga/>,
+        {     
+            index:'true',
+            element: <DashBoard/>,
+           
         },
         {
-            path: 'bundesliga',
-            element: <BundesLiga/>,
+            path: 'squad',
+            element: <Squad/>,
+            
+            
         },
         {
-            path: 'championsleague',
-            element: <ChampionsLeague/> 
+            path: 'message',
+            element: <Message/>,
+           
         },
         {
-            path: 'ligueone',
-         element:   <LigueOne/> 
+            path: 'calendar',
+            element:   <Calendar/>,
+           
         },
         {
-            path: 'premierleague',
-         element: <PremierLeague/>
+            path: 'settings',
+            element: <Settings/>,
+            
         },
         
         {
-            path: 'seria',
-         element: <Seria/>
+            path: 'transfer',
+            element: <Transfer/>,
+            
         },
         {
-            path: 'mls',
-         element: <Mls/>
-        },
-        {
-            path: 'ligamx',
-         element: <LigaMX/>
+            path: 'youthacademy',
+            element: <YouthAcademy/>,
+          
         },
     ]
     },    

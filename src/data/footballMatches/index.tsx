@@ -1,0 +1,122 @@
+ export const footballMatches = [
+  {
+    id: 1,
+    homeTeam: "Manchester United",
+    awayTeam: "Liverpool",
+    date: "2025-08-05",
+    time: "20:00",
+    venue: "Old Trafford",
+    score: "2-2",
+    status: "Finished",
+    competition: "Premier League",
+    referee: "Michael Oliver"
+  },
+  {
+    id: 2,
+    homeTeam: "Barcelona",
+    awayTeam: "Real Madrid",
+    date: "2025-08-06",
+    time: "21:00",
+    venue: "Camp Nou",
+    score: "1-3",
+    status: "Finished",
+    competition: "La Liga",
+    referee: "Antonio Mateu Lahoz"
+  },
+  {
+    id: 3,
+    homeTeam: "Bayern Munich",
+    awayTeam: "Borussia Dortmund",
+    date: "2025-08-07",
+    time: "19:30",
+    venue: "Allianz Arena",
+    score: "3-1",
+    status: "Finished",
+    competition: "Bundesliga",
+    referee: "Felix Brych"
+  },
+  {
+    id: 4,
+    homeTeam: "Juventus",
+    awayTeam: "AC Milan",
+    date: "2025-08-08",
+    time: "20:45",
+    venue: "Allianz Stadium",
+    score: "2-0",
+    status: "Finished",
+    competition: "Serie A",
+    referee: "Daniele Orsato"
+  },
+  {
+    id: 5,
+    homeTeam: "Paris SG",
+    awayTeam: "Marseille",
+    date: "2025-08-09",
+    time: "21:00",
+    venue: "Parc des Princes",
+    score: "4-2",
+    status: "Finished",
+    competition: "Ligue 1",
+    referee: "Clément Turpin"
+  },
+  {
+    id: 6,
+    homeTeam: "Chelsea",
+    awayTeam: "Arsenal",
+    date: "2025-08-10",
+    time: "19:00",
+    venue: "Stamford Bridge",
+    score: "1-1",
+    status: "Finished",
+    competition: "Premier League",
+    referee: "Paul Tierney"
+  },
+  {
+    id: 7,
+    homeTeam: "Ajax",
+    awayTeam: "PSV",
+    date: "2025-08-11",
+    time: "18:00",
+    venue: "Johan Cruyff Arena",
+    score: "2-2",
+    status: "Finished",
+    competition: "Eredivisie",
+    referee: "Björn Kuipers"
+  },
+  {
+    id: 8,
+    homeTeam: "Inter Milan",
+    awayTeam: "Napoli",
+    date: "2025-08-12",
+    time: "20:30",
+    venue: "San Siro",
+    score: "3-2",
+    status: "Finished",
+    competition: "Serie A",
+    referee: "Gianluca Rocchi"
+  },
+  {
+    id: 9,
+    homeTeam: "Atletico Madrid",
+    awayTeam: "Sevilla",
+    date: "2025-08-13",
+    time: "22:00",
+    venue: "Wanda Metropolitano",
+    score: "0-1",
+    status: "Finished",
+    competition: "La Liga",
+    referee: "José María Sánchez"
+  },
+  {
+    id: 10,
+    homeTeam: "Manchester City",
+    awayTeam: "Tottenham",
+    date: "2025-08-14",
+    time: "20:00",
+    venue: "Etihad Stadium",
+    score: "2-1",
+    status: "Finished",
+    competition: "Premier League",
+    referee: "Craig Pawson"
+  }
+];

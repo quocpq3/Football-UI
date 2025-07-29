@@ -1,44 +1,40 @@
-import { Link , useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 interface ButtonProps {
   title?: string;
   to?: string;
   icon?: IconProp;
-  leagues?: boolean;
-  logoLegues?: boolean | string;
+  children?: ButtonProps;
 }
 
-const Button = function ({ title ='',to='', icon, leagues = false, logoLegues = false }: ButtonProps) {
-    const location = useLocation();
-    const isActive = location.pathname === (to === '/' ? '/' : `/${to}`);
-    let Comp: React.ElementType = 'button';
+const Button = ({ title, to = "", icon, children }: ButtonProps) => {
+  const location = useLocation();
 
-    if(to) {
-        Comp = Link;
-    }
+  // Normalize pathname and support nested route matching
+  const currentPath = location.pathname.replace(/^\//, "");
+  const targetPath = to.replace(/^\//, "");
+  const isActive = currentPath === targetPath || currentPath.startsWith(targetPath + "/");
+
   const classes = clsx(
-    'flex items-center gap-2',
-    isActive ? ' bg-[#4462ee] text-[#fff] px-8 py-4 rounded-2xl font-semibold '
-    : ' text-[#000] px-8 py-3 rounded-2xl font-medium hover: hover:text-[#4462ee] transition-all duration-300 ease-in-out',
-    leagues&& 'h-[40px] cursor-pointer flex items-center gap-2 text-[#000] text-[14px] font-semibold hover:bg-[#4462ee] hover:text-[#fff] transition-all duration-300 ease-in-out',
-    icon && 'items-center justify-center',
-  )
+    "flex items-center gap-2 text-sm px-3 py-3 w-[180px] rounded-xl transition-all duration-300 ease-in-out",
+    isActive
+      ? "bg-gradient-to-r from-[#E21C34] to-[#500B28] text-[#fff]"
+      : "text-[#E21C34] hover:text-[#fff] hover:bg-gradient-to-r from-[#E21C34] to-[#500B28]",
+    icon && "justify-start"
+  );
+
+  const Comp = to ? Link : "button";
 
   return (
-    <Comp
-    {...(to ? { to } : {})}
-    className={classes}
-    > 
-      {icon && <FontAwesomeIcon icon={icon} className="text-xl"/>}
-         {leagues && logoLegues && (
-                <img src={logoLegues as string} alt={title} className="w-[30px] h-[30px]" />
-            )}
+    <Comp {...(to ? { to } : {})} className={classes}>
+      {icon && <FontAwesomeIcon icon={icon} className="text-xl" />}
+      {children}
       {title}
     </Comp>
   );
-}
+};
 
 export default Button;
