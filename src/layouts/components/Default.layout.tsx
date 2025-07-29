@@ -8,14 +8,14 @@ const DefaultLayoutDashBoard = function () {
 
     //bg-gradient-to-r from-[#E21C34]/30 to-[#500B28]/30
     return (
-        <div className='flex overflow-hidden h-[10000px] font-bold bg-gray-50'>
+        <div className='flex overflow-hidden font-bold bg-gray-50'>
             <div className='flex'>
                 <SidebarProvider >
                     <SidebarNavication/>
                     <SidebarTrigger/>
                 </SidebarProvider>
             </div>
-            <main className='flex flex-col flex-1 min-w-0'>
+            <main className='flex flex-col flex-1 min-w-0 '>
                 <Header/>
                 <Outlet/>
             </main>

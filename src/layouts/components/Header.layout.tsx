@@ -52,7 +52,7 @@ const Header = function () {
     return ( 
   <Navbar
       isBordered={false}
-      className="py-6 shadow-none"
+      className="py-6 border-b-2 shadow-none border-b-gray-200"
     >
       <NavbarBrand>
         <p className="font-semibold text-[18px] text-[#E21C34]">

@@ -16,7 +16,7 @@ const columns = [
 
 
     return ( 
-        <div className="container flex flex-col">
+        <div className="container flex flex-col mt-4">
             <h1 className="pl-6 text-4xl font-semibold">Dashboard</h1>
             <div className="flex mt-[50px] justify-evenly ">
                 <div className="w-[45%] h-[300px] rounded-2xl bg-gray-100 shadow-md"></div>
